@@ -8,20 +8,20 @@ dojo.require("dojo.NodeList-traverse");
 // Be sure to use the embed link from youtube
 
 var vid = [
-           ['Into the Thick of It - Secret of Mana', 'http://www.youtube.com/embed/JjnB5NuH63M'],
-           ['Liberi Fatali 2016 - Final Fantasy VIII', 'http://www.youtube.com/embed/YGjl92DqhnA'],
-           // ['Lamprey - Rogue Legacy', 'http://www.youtube.com/embed/bam14RrmfPU'],    
-           ['Vampire Killer - Castlevania','http://www.youtube.com/embed/ol0HMKyrSzI'],
-           ['The Epic Final Fantasy VIII Medley [Part 1]','http://www.youtube.com/embed/jFW_zaXFzcs'],
-           ['J-E-N-O-V-A & Birth of a God - Final Fantasy VII','http://www.youtube.com/embed/gA0i7Er5KqA'],
-           ['Dracula\'s Tomb: A Castlevania Medley','http://www.youtube.com/embed/vefZYD8EsMo'],
-           //['Kingdom Hearts Groove','http://www.youtube.com/embed/9BhF00btCzA'],
-           ['Attack on Titan OP - Guren no Yumiya','http://www.youtube.com/embed/e2vVBRyVW3M'],
-           // ['Super Mario Bros 2 Gypsy Jazz -- Full Band Cover','http://www.youtube.com/embed/bK5tY6c4rcU'],
-           ['Radical Dreamers: A Chrono Cross Medley','http://www.youtube.com/embed/hZtgRcz_d2g'],
-           //['CODE:BREAKER OP - Dark Shame!','http://www.youtube.com/embed/mngFqdomTj8'],
-           //['Card Captor Sakura ED - Groovy!','http://www.youtube.com/embed/az2yj8vgV50'],
-           //['The Epic Final Fantasy V Medley','http://www.youtube.com/embed/Ginfs4TY0oo'],
+           ['Into the Thick of It - Secret of Mana', 'https://www.youtube.com/embed/JjnB5NuH63M'],
+           ['Liberi Fatali 2016 - Final Fantasy VIII', 'https://www.youtube.com/embed/YGjl92DqhnA'],
+           // ['Lamprey - Rogue Legacy', 'https://www.youtube.com/embed/bam14RrmfPU'],    
+           ['Vampire Killer - Castlevania','https://www.youtube.com/embed/ol0HMKyrSzI'],
+           ['The Epic Final Fantasy VIII Medley [Part 1]','https://www.youtube.com/embed/jFW_zaXFzcs'],
+           ['J-E-N-O-V-A & Birth of a God - Final Fantasy VII','https://www.youtube.com/embed/gA0i7Er5KqA'],
+           ['Dracula\'s Tomb: A Castlevania Medley','https://www.youtube.com/embed/vefZYD8EsMo'],
+           //['Kingdom Hearts Groove','https://www.youtube.com/embed/9BhF00btCzA'],
+           ['Attack on Titan OP - Guren no Yumiya','https://www.youtube.com/embed/e2vVBRyVW3M'],
+           // ['Super Mario Bros 2 Gypsy Jazz -- Full Band Cover','https://www.youtube.com/embed/bK5tY6c4rcU'],
+           ['Radical Dreamers: A Chrono Cross Medley','https://www.youtube.com/embed/hZtgRcz_d2g'],
+           //['CODE:BREAKER OP - Dark Shame!','https://www.youtube.com/embed/mngFqdomTj8'],
+           //['Card Captor Sakura ED - Groovy!','https://www.youtube.com/embed/az2yj8vgV50'],
+           //['The Epic Final Fantasy V Medley','https://www.youtube.com/embed/Ginfs4TY0oo'],
           ];
 
 
