@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+	<head profile="http://gmpg.org/xfn/11">
+		<title>Matthew K. Mukerjee</title>
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.8.3/dojo/dojo.js" type="text/javascript"></script> 
+        <script src="video.js"/></script>
+        <script type="text/javascript">
+            
+            require(["dojo/domReady!"], function(){
+                emailCaptcha();
+                loadVideo();
+            });
+            
+        </script>
+	</head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div class="floatleft">
+                    <div class="title">Matthew K. Mukerjee</div>
+                    <div class="undertitle"><a href="http://www.csd.cs.cmu.edu/" target="_blank">Computer Science Department</a></div>
+                    <div class="undertitle"><a href="http://www.cmu.edu/" target="_blank">Carnegie Mellon University</a></div>
+                </div>
+                <div class="floatright">
+                    <div class="portrait"><img src="img/mkm.png"/ height=150></div>
+                    <div class="iconbar">
+                        <div class="icon" id="email">
+                            <div class="emailpopuppreload"></div>
+                            <div class="hidden" id="emailpopup"></div>
+                        </div>
+                        <a href="img/mukerjee-cv.pdf"/><div class="icon" id="cv"></div></a>
+                        <a href="https://www.facebook.com/mmukerjee" target="_blank"><div class="icon" id="facebook"></div></a>
+                        <a href="https://www.youtube.com/user/HatTrax" target="_blank"><div class="icon" id="youtube"></div></a>
+                    </div>
+                </div>
+            </div>
+            <div id="about">
+                <div class="title">About</div>
+                <div class="text">
+		  <p>I work on computer networks at large, with projects in reconfigurable
+		  (hybrid circuit/packet) datacenter networks, video/content delivery,
+		  network architecture, and mobile. My thesis work is on reconciling
+		  interactions between multiple network control loops (e.g., between layers
+		  (<a href="#etalon">Etalon</a>), between companies
+		  (<a href="#vdx">VDX</a>), or for scalability
+		  (<a href="#vdn">VDN</a>)). I'm currently wrapping up my
+		  Ph.D. at <a href="http://www.cmu.edu/" target="_blank">CMU</a>, advised
+		  by <a href="http://www.cs.cmu.edu/~srini/" target="_blank">Srini
+		  Seshan</a>.</p>
+
+		  <p>More detailed information about my work can be found in
+		  my <a href="img/mukerjee-rs.pdf">research statement</a>.</p>
+
+      <p>Before CMU, I received my B.A. in Computer Science and Japanese
+      at <a href="http://www.dartmouth.edu/" target="_blank">Dartmouth
+      College</a>, advised by <a href="http://www.cs.dartmouth.edu/~campbell/"
+      target="_blank">Andrew Campbell</a>
+      and <a href="http://www.cs.cornell.edu/~tanzeem/" target="_blank">Tanzeem
+      Choudhury</a> in CS,
+      and <a href="https://www.dartmouth.edu/~damell/department/dorsey.html"
+      target="_blank">James Dorsey</a> in Japanese. I received my M.Eng. in
+      Computer Science at <a href="http://www.cornell.edu/"
+      target="_blank">Cornell University</a>, advised by Daniel Freedman.</p>
+                </div>                
+            </div>
+            <div id="work">
+	        <div class="title">Doctoral Thesis</div>
+		<div class="text">
+		  <div class="projecttitle">Eliminating Adverse Control Plane Interactions
+		  in <br>&nbsp &nbsp Independent Network Systems</div>
+
+		  <p>Network system operation is typically divided into control and data
+		  planes--- while the data plane is responsible for processing individual
+		  messages or packets, the control plane computes the configuration of
+		  devices and optimizes system-wide performance. Unfortunately, the control
+		  plane of each network system or protocol layer typically operates
+		  independently, resulting in poor interactions between control planes
+		  across systems. I propose four general control plane coordination
+		  mechanisms to overcome these problems, based on how much information can
+		  be shared between control planes. If no information is shared, control
+		  planes simply "react" to data plane changes as a rudimentary form of
+		  coordination.  If all information can be shared, "transparency" in
+		  decision making can remove most poor interactions. In many scenarios,
+		  however, only some information can be shared (e.g., between control planes
+		  running in different companies). Coordination in these scenarios depends
+		  on data plane overlap; designs with separate data planes (e.g., BGP-BGP
+		  interactions) can use "priority ranking" (i.e., providing a list of
+		  preferences for resources without needing to show how these preferences
+		  were decided), and designs with shared data planes (e.g., BGP-OSPF
+		  interactions) can use "hierarchical partitioning" (i.e., making
+		  coarse-grained decisions globally, and fine-grained decisions
+		  locally).</p>
+
+		  <p>In this thesis, I show how to apply these techniques in three common
+		  scenarios.  Transparency can boost performance in layered systems, as I
+		  show with Etalon, in the context of reconfigurable datacenters. Priority
+		  ranking can better optimize for cost in administratively separate systems,
+		  as I show with VDX, in the context of content brokering. And hierarchical
+		  partitioning can improve responsiveness in internet-scale systems, as I
+		  show with VDN, in the context of live video streaming.</p>
+
+		  <p><b>Document:</b> soon... email for draft</p>
+		  <p><b>Slides:</b> <a href="./slides/mukerjee-thesis18-slides.pdf", target="_blank">pdf</a> 
+		    <a href="./slides/mukerjee-thesis18.key", target="_blank">keynote</a></p>
+                </div>
+
+                <div class="title">Selected Work</div>
+
+		<div class="text">
+		  <a name="etalon"></a>
+		  <div class="projecttitle">Reconfigurable Datacenter Networks: Etalon</div>
+		  <p>As datacenter networking demands have increased, CMOS manufactures have
+		  struggled to build switches with simultaneously higher bandwidth and port
+		  count. Thus, researchers have proposed augmenting datacenters with very high
+		  bandwidth circuit technologies (e.g., 60GHz wireless, optics) to add bandwidth
+		  on demand. Modifying circuits, however, has a non-trivial reconfiguration delay,
+		  leading to end-to-end challenges. In this work, we identify three key
+		  challenges: rapid bandwidth fluctuation, poor demand estimation, and
+		  difficult-to-schedule workloads. These challenges all derive from assumptions
+		  made by the application and endhost stack about the network. Using cross-layer
+		  knowledge, we solve these problems directly with: dynamic in-network queue
+		  resizing to mask bandwidth fluctuations, proper demand estimation using endhost stack
+		  ADUs, and rewriting application logic for easier-to-schedule demand. We evaluate
+		  the efficacy of these solutions by building Etalon, an open-source
+		  reconfigurable datacenter emulator for use on public test beds, finding they can
+		  improve circuit utilization by 2x, flow-completion time by 8x, and
+		  HDFS write times by 9x.</p>
+
+		  <p><b>Publication:</b> In submission... email me for a draft</p>
+		  
+		  <p><b>Etalon source code:</b> <a href="https://www.github.com/mukerjee/etalon/">github</a></p>
+
+		  <p><b>Slides:</b> In progress... email me for a draft</p>
+		</div>
+		
+		<hr>
+		<div class="text">
+		  <a name="vdx"></a>
+		  <div class="projecttitle">Mitigating the Impact of Brokers on Content Delivery: VDX</div>
+		  <p>Various trends are reshaping Internet video delivery: exponential growth in
+		    video traffic, increasing expectations of high video quality of experience
+		    (QoE), and the proliferation of varied CDN deployments (e.g., cloud
+		    computing-based, content provider-owned datacenters, and ISP-owned CDNs). More
+		    fundamentally, content providers are shifting delivery from a single CDN to
+		    multiple CDNs, through the use of a content broker. In our work, we show brokers
+		    invalidate many traditional delivery assumptions by not communicating their
+		    decisions with CDNs (e.g., shifting traffic between CDNs mid-stream invalidates
+		    short- and long-term CDN traffic prediction). Using data from both a CDN and a
+		    broker, we provide the first analysis of these issues, and design a proper
+		    marketplace-like interface (VDX) that provides better client performance and
+		    fairly pays CDNs based on their per-cluster delivery costs.</p>
+		  
+		    <p><b>Publication (CoNEXT '17):</b>
+			<a href="./papers/vdx-conext17.pdf", target="_blank">Matthew K. Mukerjee, Ilker Nadi Bozkurt, 
+			Devdeep Ray, Bruce Maggs, Srinivasan Seshan, Hui Zhang.
+			Redesigning CDN-Broker Interactions for Improved Content Delivery.</a> <br><b><font color="red">Best Paper Award</font></b></p>
+		    <p><b>Publication (HotNets '16):</b>
+			<a href="./papers/vdx-hotnets16.pdf", target="_blank">Matthew K. Mukerjee, Ilker Nadi Bozkurt, Bruce Maggs, 
+		        Srinivasan Seshan, Hui Zhang.
+			The Impact of Brokers on the Future of Content Delivery.</a></p>
+		    <p><b>Slides (CoNEXT):</b> <a href="./slides/vdx-conext17-slides.pdf", target="_blank">pdf</a> 
+		      <a href="./slides/vdx-conext17.key", target="_blank">keynote</a></p>
+		    <p><b>Slides (HotNets):</b> <a href="./slides/vdx-hotnets16-slides.pdf", target="_blank">pdf</a> 
+		      <a href="./slides/vdx-hotnets16.key", target="_blank">keynote</a></p>
+		</div>
+		    
+		    <hr>
+          <div class="text">
+		        <a name="vdn"></a>
+            <div class="projecttitle">Practical Centralized Control for Live
+            Video Delivery: VDN</div>
+		  
+		  <p>Live video delivery is difficult to control due to failures, flash
+		    crowds, and under-provisioning at Internet-scale.  Traditional
+		    caching-based solutions are not helpful due to the <em>live</em>
+		    aspect. Pure centralization in the wide-area is not practical due to the
+		    simultaneous need of high availability, low latency, and highly
+		    optimized quality.  We design a system, VDN, that combines the quality
+		    benefits of centralized optimization with the high availability and low
+		    latency of distributed control, which we dub <em>hybrid control</em>.
+		    Using large-scale simulation and a wide-area testbed, we show that VDN
+		    can offer ~2x improvement in quality over today's DNS-based systems and
+		    ~100ms join times, while providing CDN operators expressive policy
+		    management.</p>
+
+		  <p><b>Publication (SIGCOMM '15):</b> <a href="./papers/vdn-sigcomm15.pdf", target="_blank">
+			Matthew K. Mukerjee, David Naylor, Junchen Jiang, Dongsu Han, Srinivasan Seshan, 
+			Hui Zhang. Practical, Real-time Centralized Control for CDN-based Live Video Delivery.</a></p>
+
+		  <p><b>Slides:</b> <a href="./slides/vdn-sigcomm15-slides.pdf", target="_blank">pdf</a> 
+		    <a href="./slides/vdn-sigcomm15.key", target="_blank">keynote</a></p>
+		</div>
+
+                
+		<hr>
+      <div class="text">
+        <div class="projecttitle">Mobile Brain-Computer Interfaces: NeuroPhone</div>
+
+		    <p>How can we incorporate commodity (toy / &lt $300)
+	      electroencephalography (EEG) headsets into meaningful mobile
+	      applications? We build NeuroPhone, a
+		    <em>brain-powered</em> address book, to provide a cursory glance into
+		    this seemingly Sci-Fi future. A phone presents pictures of contacts, and
+		    the user is told to anticipate the picture of the person they wish to
+		    call. When the picture appears, their brain elicits a <em>P300
+		    response</em> recognized by the EEG headset, initiating the call.</p>
+                    
+        <p><b>Publication (SIGCOMM 2010 workshop MobiHeld): </b>
+		    <a href="./papers/neurophone-mobiheld10.pdf", target="_blank">
+		    Campbell, A. T., T. Choudhury, S. Hu, H. Lu, M. K. Mukerjee, M. Rabbi,
+        R. D. S. Raizada. NeuroPhone: Brain-Mobile Phone Interface using a
+        Wireless EEG Headset.</a></p>
+                </div>
+
+		    <hr>
+
+		      <b><center>For my full publication list, see my
+		      <a href=img/mukerjee-cv.pdf>CV</a>.</center></b>
+                
+            </div>
+
+            <br>
+	    <div id="talks">
+	      <div class="title">Talk Videos</div>
+		<center>
+		  <div style="width:100%; display:table;" >
+		    <div style="width:100%; display:table-row;" >
+		      <div style="width:290; display:table-cell;" >
+			<div class="projecttitle">VDN at SIGCOMM '15:</div>
+			<iframe width="280" height="170" src="https://www.youtube.com/embed/BdevljOz-1k" frameborder="0" allowfullscreen></iframe>
+		      </div>
+		      <div style="width:290; display:table-cell;" >
+			<div class="projecttitle">VDN at DIMACS '16:</div>
+			<iframe width="280" height="170" src="https://www.youtube.com/embed/21zNz_wx89A" frameborder="0" allowfullscreen></iframe>
+		      </div>
+		    </div>
+		  </div>
+		</center>
+	    </div>
+	    <br>
+
+            <div id="music">
+                <div class="title">Music</div>
+                <div class="text">
+                    <p>I collaborate with musicians around the world on
+                    YouTube. These days most projects are with my jazz-fusion
+                    video game music
+                    band <a href="https://www.youtube.com/user/TetriminoVGBand"
+                    target="_blank">Tetrimino</a>.</p>
+                    
+                    <div id="musiccontainer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            2018
+        </div>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "Latex";
+    src: url(fonts/lmroman17-regular.otf) format("opentype");
+}
+@font-face {
+    font-family: "Latex Italic";
+    src: url(fonts/lmromanunsl10-regular.otf) format("opentype");
+}
+body{
+    background: url('img/tile.png') #d4e3e9;
+}
+#container{
+    width:800px;
+    background: url('img/bass.png') -230px -60px no-repeat #ffffff;
+    margin:auto;
+    margin-top:-15px;
+    padding:60px;
+    border:2px solid #58585a;
+    box-shadow: 0px 0px 3px #333333;
+    -moz-box-shadow: 0px 0px 3px #333333;
+    -webkit-box-shadow: 0px 0px 3px #333333;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    font-family:'Latex', Tahoma;
+    font-size:18px;
+    margin-bottom:20px;
+}
+#footer{
+    width:800px;
+    margin:auto;
+    text-align:center;
+    padding:20px;
+    font-family:'Latex Italic',Tahoma;
+    font-size:18px;
+    opacity:0.5;
+}
+img{
+    border:0px;
+}
+a,a:visited,.expandcollapse{
+    color:#3ac3f3;
+    text-decoration:none;
+}
+a:hover,.expandcollapse:hover{
+    color:#29a1cb;
+    text-decoration:none;
+}
+.expandcollapse{
+    margin-top:20px;
+    font-size:24px;
+    font-family:'Latex Italic',Tahoma;
+    cursor:pointer;
+}
+.floatleft{
+    float:left;
+}
+.floatright{
+    float:right;
+}
+#header{
+    min-height:150px;
+}
+.iconbar{
+    padding-top:10px;
+    width:160px;
+}
+.icon{
+    width:40px;
+    height:40px;
+    float:left;
+    background: 0px 0px;
+}
+.icon:hover{
+    background: 40px 0px;
+}
+.title{
+    font-size:44px;
+    font-family:'Latex';
+}
+.undertitle{
+    font-size:26px;
+}
+.projecttitle{
+    font-size:26px;
+    padding-top:15px;
+}
+#music .projecttitle{ 
+    background:url('img/darrow.png') -2px 20px no-repeat;
+    padding-left:33px;
+}
+.pointersim{
+    cursor:pointer;
+    background:url('img/arrow.png') 0px 18px no-repeat !important;
+}
+.projectsubtitle{
+    font-family:'Latex Italic';
+    opacity:0.5;
+    font-style:italic;
+}
+.video{
+    padding-top:20px;
+}
+#cv{
+    background-image:url('img/cv.png');
+}
+#email{
+    background-image:url('img/email.png');
+}
+#facebook{
+    background-image:url('img/facebook.png');
+}
+#youtube{
+    background-image:url('img/youtube.png');
+}
+.hidden{
+    display:none;
+}
+
+#emailpopup,.emailpopup{
+    background-image:url('img/captcha.png');
+    width:435px;
+    height:25px;
+    position:absolute;
+    margin-top:-25px;
+    margin-left:-440px;
+}
+.emailpopuppreload{
+    width:0px;
+    height:0px;
+    background-image:url('img/captcha.png');
+}
