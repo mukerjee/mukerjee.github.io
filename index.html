@@ -21,9 +21,8 @@
         <div id="container">
             <div id="header">
                 <div class="floatleft">
-                    <div class="title">Matthew K. Mukerjee</div>
-                    <div class="undertitle"><a href="http://www.csd.cs.cmu.edu/" target="_blank">Computer Science Department</a></div>
-                    <div class="undertitle"><a href="http://www.cmu.edu/" target="_blank">Carnegie Mellon University</a></div>
+                    <div class="title">Matthew K. Mukerjee, PhD</div>
+                    <div class="undertitle"><a href="https://nefeli.io/" target="_blank">Nefeli Networks</a></div>
                 </div>
                 <div class="floatright">
                     <div class="portrait"><img src="img/mkm.png"/ height=150></div>
@@ -41,30 +40,32 @@
             <div id="about">
                 <div class="title">About</div>
                 <div class="text">
+      <p>I've moved to <a href="https://nefeli.io" target="_blank">Nefeli
+      Networks</a></p>
+      
 		  <p>I work on computer networks at large, with projects in reconfigurable
 		  (hybrid circuit/packet) datacenter networks, video/content delivery,
 		  network architecture, and mobile. My thesis work is on reconciling
 		  interactions between multiple network control loops (e.g., between layers
 		  (<a href="#etalon">Etalon</a>), between companies
 		  (<a href="#vdx">VDX</a>), or for scalability
-		  (<a href="#vdn">VDN</a>)). I'm currently wrapping up my
-		  Ph.D. at <a href="http://www.cmu.edu/" target="_blank">CMU</a>, advised
-		  by <a href="http://www.cs.cmu.edu/~srini/" target="_blank">Srini
-		  Seshan</a>.</p>
+		  (<a href="#vdn">VDN</a>)). More detailed information about my work can be
+		  found in my <a href="./mukerjee-rs.pdf" target="_blank">research
+		  statement</a>.</p>
 
-		  <p>More detailed information about my work can be found in
-		  my <a href="./mukerjee-rs.pdf" target="_blank">research statement</a>.</p>
-
-      <p>Before CMU, I received my B.A. in Computer Science and Japanese
-      at <a href="http://www.dartmouth.edu/" target="_blank">Dartmouth
-      College</a>, advised by <a href="http://www.cs.dartmouth.edu/~campbell/"
-      target="_blank">Andrew Campbell</a>
-      and <a href="http://www.cs.cornell.edu/~tanzeem/" target="_blank">Tanzeem
-      Choudhury</a> in CS,
-      and <a href="https://www.dartmouth.edu/~damell/department/dorsey.html"
-      target="_blank">James Dorsey</a> in Japanese. I received my M.Eng. in
-      Computer Science at <a href="http://www.cornell.edu/"
-      target="_blank">Cornell University</a>, advised by Daniel Freedman.</p>
+      <p>I completed my PhD at <a href="https://www.cmu.edu/"
+		  target="_blank">CMU</a>, advised
+		  by <a href="https://www.cs.cmu.edu/~srini/" target="_blank">Srini
+		  Seshan</a>. Before CMU, I received my B.A. in Computer Science and
+		  Japanese at <a href="https://www.dartmouth.edu/" target="_blank">Dartmouth
+		  College</a>, advised by <a href="https://www.cs.dartmouth.edu/~campbell/"
+		  target="_blank">Andrew Campbell</a>
+		  and <a href="https://www.cs.cornell.edu/~tanzeem/" target="_blank">Tanzeem
+		  Choudhury</a> in CS,
+		  and <a href="https://www.dartmouth.edu/~damell/department/dorsey.html"
+		  target="_blank">James Dorsey</a> in Japanese. I received my M.Eng. in
+		  Computer Science at <a href="https://www.cornell.edu/"
+		  target="_blank">Cornell University</a>, advised by Daniel Freedman.</p>
                 </div>                
             </div>
             <div id="work">
@@ -79,29 +80,39 @@
 		  devices and optimizes system-wide performance. Unfortunately, the control
 		  plane of each network system or protocol layer typically operates
 		  independently, resulting in poor interactions between control planes
-		  across systems. I propose four general control plane coordination
-		  mechanisms to overcome these problems, based on how much information can
-		  be shared between control planes. If no information is shared, control
-		  planes simply "react" to data plane changes as a rudimentary form of
-		  coordination.  If all information can be shared, "transparency" in
-		  decision making can remove most poor interactions. In many scenarios,
-		  however, only some information can be shared (e.g., between control planes
-		  running in different companies). Coordination in these scenarios depends
-		  on data plane overlap; designs with separate data planes (e.g., BGP-BGP
-		  interactions) can use "priority ranking" (i.e., providing a list of
-		  preferences for resources without needing to show how these preferences
-		  were decided), and designs with shared data planes (e.g., BGP-OSPF
-		  interactions) can use "hierarchical partitioning" (i.e., making
-		  coarse-grained decisions globally, and fine-grained decisions
-		  locally).</p>
+		  across systems. I categorize such systems using four general control
+		  plane coordination mechanisms that can overcome these problems, based on
+		  how much information can be shared between control planes. If no
+		  information is shared, control planes simply "react" to data plane changes
+		  as a rudimentary form of coordination.  If all information can be shared,
+		  "transparency" in decision making can remove most poor interactions. In
+		  many scenarios, however, only some information can be shared (e.g.,
+		  between control planes running in different companies). Coordination in
+		  these scenarios is more specialized; control planes with separate data
+		  plane resources can use "priority ranking" (i.e., providing a list of
+		  preferences for resources without needing to show how those preferences
+		  were decided; e.g., BGP routing between ISPs), and control planes with
+		  shared data plane resources can use "hierarchical partitioning" (i.e.,
+		  making coarse-grained decisions globally, and fine-grained decisions
+		    locally; e.g., internet-wide BGP + OSPF routing).</p>
 
-		  <p>In this thesis, I show how to apply these techniques in three common
-		  scenarios.  Transparency can boost performance in layered systems, as I
-		  show with Etalon, in the context of reconfigurable datacenters. Priority
-		  ranking can better optimize for cost in administratively separate systems,
-		  as I show with VDX, in the context of content brokering. And hierarchical
-		  partitioning can improve responsiveness in internet-scale systems, as I
-		  show with VDN, in the context of live video streaming.</p>
+      <p>While systems utilizing control plane coordination exist today, they
+      have been designed in an ad hoc fashion. I propose a set of recipes that
+      show when it's appropriate to use different coordination mechanisms, based
+      on key properties (information sharing and shared resources) in varied
+      scenarios (layering, administrative separation, and internet-scale
+      systems).</p>
+
+		  <p>I use these recipes to guide system design in a variety of contexts, as
+		  a case study in control plane coordination. Transparency can boost
+		  performance in layered systems, as I show with Etalon, in the context of
+		  reconfigurable datacenters. Priority ranking can better optimize for cost
+		  in administratively separate systems, as I show with VDX, in the context
+		  of content brokering. Hierarchical partitioning can improve responsiveness
+		  in internet-scale systems, as I show with VDN, in the context of live
+		  video streaming. Through this case study we find that these coordination
+		  mechanisms not only solve a variety of problems, but can be efficiently
+		  implemented.</p>
 
 		  <p><b>Document:</b> <a href="./papers/mukerjee-thesis18.pdf"
 		  target="_blank">Matthew K. Mukerjee. Eliminating Adverse Control Plane
@@ -128,7 +139,7 @@
 		  resizing to mask bandwidth fluctuations, proper demand estimation using endhost stack
 		  ADUs, and rewriting application logic for easier-to-schedule demand. We evaluate
 		  the efficacy of these solutions by building Etalon, an open-source
-		  reconfigurable datacenter emulator for use on public test beds, finding they can
+		  reconfigurable datacenter emulator for use on public testbeds, finding they can
 		  improve circuit utilization by 2x, flow-completion time by 8x, and
 		  HDFS write times by 9x.</p>
 
