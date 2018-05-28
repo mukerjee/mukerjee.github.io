@@ -116,16 +116,40 @@ a:hover,.expandcollapse:hover{
     display:none;
 }
 
-#emailpopup,.emailpopup{
-    background-image:url('img/captcha.png');
-    width:435px;
-    height:25px;
-    position:absolute;
-    margin-top:-25px;
-    margin-left:-440px;
+/* #emailpopup,.emailpopup{ */
+/*     background-image:url('img/captcha.png'); */
+/*     width:435px; */
+/*     height:25px; */
+/*     position:absolute; */
+/*     margin-top:-25px; */
+/*     margin-left:-440px; */
+/* } */
+/* .emailpopuppreload{ */
+/*     width:0px; */
+/*     height:0px; */
+/*     background-image:url('img/captcha.png'); */
+/* } */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
 }
-.emailpopuppreload{
-    width:0px;
-    height:0px;
-    background-image:url('img/captcha.png');
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
