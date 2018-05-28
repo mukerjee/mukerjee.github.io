@@ -116,36 +116,23 @@ a:hover,.expandcollapse:hover{
     display:none;
 }
 
-/* #emailpopup,.emailpopup{ */
-/*     background-image:url('img/captcha.png'); */
-/*     width:435px; */
-/*     height:25px; */
-/*     position:absolute; */
-/*     margin-top:-25px; */
-/*     margin-left:-440px; */
-/* } */
-/* .emailpopuppreload{ */
-/*     width:0px; */
-/*     height:0px; */
-/*     background-image:url('img/captcha.png'); */
-/* } */
-
 .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
+    width:40px;
+    height:40px;
+    float:left;
+    background: 0px 0px;
 }
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 260px;
     background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
 
-    /* Position the tooltip */
+    margin-left: -260px;
     position: absolute;
     z-index: 1;
 }
